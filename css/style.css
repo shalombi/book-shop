@@ -1,0 +1,258 @@
+body {
+    background-color: rgb(248, 241, 241);
+    font-family: Arial;
+    color: rgb(29, 28, 28);
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0 40px;
+}
+
+.header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    background: #121111;
+    border-radius: 6px;
+    display: flex;
+    color: rgb(245, 242, 242);
+    font-size: 12px;
+    position: relative;
+    justify-content: center;
+    /* opacity: 0.75; */
+    margin-top: 3px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    position: absolute;
+    right: 48px;
+    top: 15px;
+}
+
+/* Page Content */
+.content {
+    padding: 20px;
+}
+
+.img-book {
+
+    width: 170px;
+    height: 230px;
+}
+
+.books-container {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+button {
+    background-color: #222;
+    color: whitesmoke;
+    border: 0;
+    border-radius: .2em;
+    padding: 6px 10px;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+button:hover {
+    color: rgb(102, 101, 102);
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-preview {
+    background-color: rgb(106, 102, 102);
+    color: rgb(254, 254, 254);
+    width: 20%;
+    margin: .5em;
+    border: 1px solid lightgray;
+    border-radius: .2em;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.book-preview .btn-remove {
+    float: right;
+}
+
+.btn-remove {
+    background-color: rgb(245, 28, 28);
+
+}
+
+.update-btn {
+    background-color: rgb(255, 168, 6);
+}
+
+.details-btn {
+    background-color: rgb(59, 59, 225);
+}
+
+.update-rate-btn {
+    /* position: absolute; */
+    left: 20px;
+}
+
+.book-preview img {
+    max-width: 100%;
+}
+
+.book-preview h5 {
+    font-size: 1.4em;
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+
+.book-preview h6 span {
+    color: tomato;
+    font-size: 2em;
+}
+
+.book-filter {
+    background-color: rgb(40, 5, 155);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 6px;
+    opacity: 0.9;
+    color: azure;
+}
+
+.filter-book-select {
+    text-transform: capitalize;
+}
+
+.book-filter hr {
+    margin: 30px;
+}
+
+
+.modal {
+    background-color: #111;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    height: 80vh;
+    min-width: 300px;
+    text-align: center;
+    color: beige;
+}
+
+.modal.open {
+    left: 50%;
+    transition: left .5s;
+}
+
+.modal h3 {
+    color: pink;
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+
+.modal h4 span {
+    color: rgb(245, 231, 233);
+}
+
+.modal>p {
+    text-align: left;
+}
+
+
+.user-msg {
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    background-color: #111;
+    padding: 10px;
+    color: rgb(47, 0, 255);
+}
+
+.user-msg.open {
+    bottom: 10px;
+    transition: bottom .5s;
+}
+
+/* .book-filter { */
+/* display: flex; */
+/* justify-content: left; */
+/* position: absolute;
+    left: 450px;
+    top: 350px; */
+/* transform: rotate(90deg) */
+/* } */
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+    /* font-weight: bold; */
+
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-weight: bolder; */
+    font-size: 20px;
+    background-color: rgb(255, 246, 246);
+    border-collapse: collapse;
+
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* padding: 10px; */
+
+}
+
+.table-headline {
+    background-color: #272727;
+    color: white;
+}
+
+/* pagination styling */
+.pagination_section a {
+    color: rgb(23, 22, 22);
+    padding: 6px 22px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    /* margin-top: 10px; */
+    /* display: flex;
+    flex-direction: column; */
+    /* position: absolute; */
+    /* margin-left: 50%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+}
+
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+    background-color: #031F3B;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #bfbcbc;
+    /* opacity: 0.4; */
+}
+
+tablea:hover {
+    cursor: pointer;
+}

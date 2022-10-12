@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book-shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload=" onInit()">
+
+    <header class="header">
+        <img class="logo-img" src="img/logo1.jpg" alt="" />
+        <h1 class="title">ONLINE BOOK-SHOP</h1>
+    </header>
+
+    <div class="right-filter">
+        <section class="book-filter">
+            <h2>Filter</h2>
+            <input type="text" class="searchTxt" onchange="getTxtFromSearch()" placeholder="Search..">
+            <select class="filter-book-select" onchange="onSetFilterBy()">
+
+                <option value="">Select Filter</option>
+                <option value="minPrice">Min Price</option>
+                <option value="maxPrice">Max Price </option>
+                <option value="search">Search </option>
+            </select>
+            </select>
+            <label>
+                Price Filter:
+                <input type="range" min="0" max="100" value="30" class="filter-price-range" onchange="
+                     this.selectedPrice=this.value;
+                     onSetFilterBy( {...(window.gFilterBy || {}), price: this.value })" />
+            </label>
+            <hr />
+            <div>
+                Sort by:
+                <select class="sort-by" onchange="onSetSortBy()">
+                    <option value="">Select Sorting</option>
+                    <option value="price">By Price</option>
+                    <option value="rate">rate</option>
+                </select>
+                <label>
+                    Descending
+                    <input class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
+                </label>
+
+            </div>
+        </section>
+    </div>
+
+    <button title="Add Book" onclick="onAddBook()">Add Book</button>
+
+    <section>
+        <table>
+            <thead>
+                <tr class="table-headline"></tr>
+            </thead>
+            <tbody class="table-container"> </tbody>
+        </table>
+    </section>
+
+    <div class="modal">
+        <h3></h3>
+        <h4>price: <span></span> $</h4>
+        <h5>Book Description:</h5>
+        <p></p>
+        <button onclick="onCloseModal()">Close</button>
+    </div>
+
+    <div class="user-msg"></div>
+    <div class="pagination_section">
+    </div>
+
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/services/util.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+
+</html>
